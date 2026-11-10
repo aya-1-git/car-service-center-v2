@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="../.gitignore" />
+  </Folder>
+  <Project Path="Project1 EXTRA DRAFT.vcxproj" Id="e66ccc43-328f-410c-b133-749d9ec0d9b2" />
+</Solution>

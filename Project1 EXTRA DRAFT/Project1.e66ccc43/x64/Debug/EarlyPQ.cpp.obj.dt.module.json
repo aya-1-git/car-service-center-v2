@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Project1.e66ccc43\\x64\\Debug\\EarlyPQ.obj",
+            "outputs": [
+                "Project1.e66ccc43\\x64\\Debug\\EarlyPQ.cpp.obj.dt.module.json",
+                "Project1.e66ccc43\\x64\\Debug\\EarlyPQ.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
