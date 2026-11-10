@@ -141,26 +141,30 @@
   <ItemGroup>
     <ClInclude Include="..\Center\Center.h" />
     <ClInclude Include="..\ds\ArrayStack.h" />
+    <ClInclude Include="..\ds\CountQueue.h" />
     <ClInclude Include="..\ds\EarlyPQ.h" />
     <ClInclude Include="..\ds\LateQueue.h" />
-    <ClInclude Include="..\ds\LinkedQueue Queues.h" />
     <ClInclude Include="..\ds\LinkedQueue.h" />
-    <ClInclude Include="..\ds\List.h" />
     <ClInclude Include="..\ds\Node.h" />
     <ClInclude Include="..\ds\priNode.h" />
+    <ClInclude Include="..\ds\PrintItem.h" />
     <ClInclude Include="..\ds\priQueue.h" />
-    <ClInclude Include="..\ds\Queue.h" />
+    <ClInclude Include="..\ds\QueueADT.h" />
+    <ClInclude Include="..\ds\StackADT.h" />
     <ClInclude Include="..\ds\WaitingQueue.h" />
     <ClInclude Include="..\entities\Bay.h" />
     <ClInclude Include="..\entities\Car.h" />
-    <ClInclude Include="..\entities\Generator.h" />
+    <ClInclude Include="..\entities\CarGenerator.h" />
     <ClInclude Include="..\Ui\Ui.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Center\Center Setup.cpp" />
+    <ClCompile Include="..\Center\Center sim m1.cpp" />
+    <ClCompile Include="..\Center\Center sim m3.cpp" />
     <ClCompile Include="..\Center\Center.cpp" />
     <ClCompile Include="..\entities\Bay.cpp" />
     <ClCompile Include="..\entities\Car.cpp" />
-    <ClCompile Include="..\entities\Generator.cpp" />
+    <ClCompile Include="..\entities\CarGenerator.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\Ui\Ui.cpp" />
   </ItemGroup>
@@ -168,6 +172,7 @@
     <Text Include="..\Input.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

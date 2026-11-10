@@ -16,9 +16,9 @@ Center::~Center()
     // Every car/bay is created once with new, so delete each pointer exactly once.
     // At the end of a normal run all cars are in fnshList/cnclList and all bays are in the free lists.
     // Draining every list also covers a run that stopped early.
-    //Car* c;
+    Car* c;
     int p;
-    /*while (idleList.dequeue(c, p))  delete c;
+    while (idleList.dequeue(c, p))  delete c;
     while (earlyList.dequeue(c, p)) delete c;
     while (lateList.dequeue(c))     delete c;
     while (readyList.dequeue(c))    delete c;
@@ -41,10 +41,12 @@ bool Center::allCarsDone() const
 {
     return fnshList.GetCount() + cnclList.GetCount() == totalCars;
 }
+
 bool Center::chance(int percent)
 {
     return (rand() % 100) < percent;
 }
+
 int Center::randInt(int lo, int hi)
 {
     return lo + rand() % (hi - lo + 1);
@@ -67,21 +69,19 @@ void Center::runRandomSimulation()
 
         moveIdleToLists(t);       // 2.1
         moveEarlyToReady(t);      // 2.2
-        cancelRandomLate(t);      // 2.3
-        moveLateToReady(t);       // 2.4
+        //cancelRandomLate(t);      // 2.3
+        //moveLateToReady(t);       // 2.4
         assignReadyToDiag(t);     // 2.5
         finishDiagnosis(t);       // 2.6, 2.7
-        assignWaitToBays(t);      // 2.8
-        finishServices(t);        // 2.9, 2.10
+        //assignWaitToBays(t);      // 2.8
+        //finishServices(t);        // 2.9, 2.10
         printState(t);            // 2.11
 
-        cout << "PRESS ANY KEY TO MOVE TO NEXT STEP !" << endl;
-        cin.get();                // comment this line out while testing so it runs by itself
+        ui.waitForKey();          // comment this line out while testing so it runs by itself
 
         currentTimestep++;
     }
 
     if (!allCarsDone())
         cout << "Stopped: reached " << MAX_STEPS << " timesteps and not all cars are done." << endl;
-        */
 }

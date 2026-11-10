@@ -27,16 +27,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\ds\List.h">
-      <Filter>ds</Filter>
-    </ClInclude>
     <ClInclude Include="..\entities\Bay.h">
       <Filter>entities</Filter>
     </ClInclude>
     <ClInclude Include="..\entities\Car.h">
       <Filter>entities</Filter>
     </ClInclude>
-    <ClInclude Include="..\entities\Generator.h">
+    <ClInclude Include="..\entities\CarGenerator.h">
       <Filter>entities</Filter>
     </ClInclude>
     <ClInclude Include="..\Center\Center.h">
@@ -60,9 +57,6 @@
     <ClInclude Include="..\ds\ArrayStack.h">
       <Filter>ds</Filter>
     </ClInclude>
-    <ClInclude Include="..\ds\Queue.h">
-      <Filter>ds</Filter>
-    </ClInclude>
     <ClInclude Include="..\ds\EarlyPQ.h">
       <Filter>ds</Filter>
     </ClInclude>
@@ -72,7 +66,16 @@
     <ClInclude Include="..\ds\WaitingQueue.h">
       <Filter>ds</Filter>
     </ClInclude>
-    <ClInclude Include="..\ds\LinkedQueue Queues.h">
+    <ClInclude Include="..\ds\QueueADT.h">
+      <Filter>ds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ds\StackADT.h">
+      <Filter>ds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ds\CountQueue.h">
+      <Filter>ds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ds\PrintItem.h">
       <Filter>ds</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,7 +86,7 @@
     <ClCompile Include="..\entities\Car.cpp">
       <Filter>entities</Filter>
     </ClCompile>
-    <ClCompile Include="..\entities\Generator.cpp">
+    <ClCompile Include="..\entities\CarGenerator.cpp">
       <Filter>entities</Filter>
     </ClCompile>
     <ClCompile Include="..\main.cpp">
@@ -95,11 +98,21 @@
     <ClCompile Include="..\Ui\Ui.cpp">
       <Filter>Ui</Filter>
     </ClCompile>
+    <ClCompile Include="..\Center\Center Setup.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center sim m1.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center sim m3.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Input.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

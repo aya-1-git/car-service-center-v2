@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\aya semester 5\\data structure\\project phase 1.2\\aya-1-git\\carservicecenter\\ds\\linkedqueue.h",
+        "Source": "d:\\aya semester 5\\data structure\\aya p1\\ds\\linkedqueue.h",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\aya semester 5\\data structure\\project phase 1.2\\aya-1-git\\carservicecenter\\ds\\node.h",
-            "d:\\aya semester 5\\data structure\\project phase 1.2\\aya-1-git\\carservicecenter\\ds\\queueadt.h",
+            "d:\\aya semester 5\\data structure\\aya p1\\ds\\node.h",
+            "d:\\aya semester 5\\data structure\\aya p1\\ds\\queueadt.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\iostream",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\yvals_core.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",
