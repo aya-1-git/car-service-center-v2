@@ -1,10 +1,8 @@
-#include<iostream>
-using namespace std;
+#include "Center/Center.h"
+
 int main()
 {
-	for(int i=0;i<2;i++)
-	{cout << "Hello, World!" <<endl;
-	}
-	return 0;
+    Center center;
+    center.runRandomSimulation();
+    return 0;
 }
-// branchhs

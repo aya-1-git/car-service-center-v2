@@ -69,15 +69,15 @@ void Center::runRandomSimulation()
 
         moveIdleToLists(t);       // 2.1
         moveEarlyToReady(t);      // 2.2
-        //cancelRandomLate(t);      // 2.3
-        //moveLateToReady(t);       // 2.4
+        cancelRandomLate(t);      // 2.3
+        moveLateToReady(t);       // 2.4
         assignReadyToDiag(t);     // 2.5
         finishDiagnosis(t);       // 2.6, 2.7
         //assignWaitToBays(t);      // 2.8
         //finishServices(t);        // 2.9, 2.10
         printState(t);            // 2.11
 
-        ui.waitForKey();          // comment this line out while testing so it runs by itself
+        //ui.waitForKey();          // comment this line out while testing so it runs by itself
 
         currentTimestep++;
     }
