@@ -104,10 +104,28 @@
     <ClCompile Include="..\Center\Center sim m1.cpp">
       <Filter>Center</Filter>
     </ClCompile>
-    <ClCompile Include="..\Center\Center sim m3.cpp">
+    <ClCompile Include="..\Center\Center sim m2.cpp">
       <Filter>Center</Filter>
     </ClCompile>
-    <ClCompile Include="Center sim m2.cpp">
+    <ClCompile Include="..\Center\Center sim m5.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center sim m6.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center sim m7.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center sim m8.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center sim m9.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center sim m10.cpp">
+      <Filter>Center</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Center\Center helpers.cpp">
       <Filter>Center</Filter>
     </ClCompile>
   </ItemGroup>

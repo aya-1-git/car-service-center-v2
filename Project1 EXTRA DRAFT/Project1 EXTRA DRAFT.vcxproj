@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -158,16 +158,22 @@
     <ClInclude Include="..\Ui\Ui.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Center\Center helpers.cpp" />
     <ClCompile Include="..\Center\Center Setup.cpp" />
     <ClCompile Include="..\Center\Center sim m1.cpp" />
-    <ClCompile Include="..\Center\Center sim m3.cpp" />
+    <ClCompile Include="..\Center\Center sim m10.cpp" />
+    <ClCompile Include="..\Center\Center sim m2.cpp" />
+    <ClCompile Include="..\Center\Center sim m5.cpp" />
+    <ClCompile Include="..\Center\Center sim m6.cpp" />
+    <ClCompile Include="..\Center\Center sim m7.cpp" />
+    <ClCompile Include="..\Center\Center sim m8.cpp" />
+    <ClCompile Include="..\Center\Center sim m9.cpp" />
     <ClCompile Include="..\Center\Center.cpp" />
     <ClCompile Include="..\entities\Bay.cpp" />
     <ClCompile Include="..\entities\Car.cpp" />
     <ClCompile Include="..\entities\CarGenerator.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\Ui\Ui.cpp" />
-    <ClCompile Include="Center sim m2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Input.txt" />

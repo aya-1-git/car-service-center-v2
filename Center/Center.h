@@ -10,6 +10,7 @@
 #include "../ds/WaitingQueue.h"
 
 // priQueue: HIGHEST priority comes out first, so for "min X" order pass -X.
+
 class Center
 {
 private:
@@ -37,11 +38,11 @@ private:
     CountQueue<Bay*>  freeWB;        // wash bays that still have room
 
 public:
-    // ---------- Member 3: Center.cpp ----------
+    // ---------- Center.cpp: constructor, destructor, allCarsDone, chance, randInt ----------
     Center();
     ~Center();
     bool allCarsDone() const;
-    void runRandomSimulation();       // calls 2.1 to 2.11 in order, every timestep
+    void runRandomSimulation();       // Center_Sim_M10.cpp: calls 2.1 to 2.11 in order, every timestep
 
     // ---------- Member 1: Center_Setup.cpp + Center_Sim_M1.cpp ----------
     void setupBays(int nDU, int nMU, int nEU, int nWU, int wbCap);
@@ -53,19 +54,36 @@ public:
     void cancelRandomLate(int t);     // 2.3
     void moveLateToReady(int t);      // 2.4
 
-    // ---------- Member 3: Center_Sim_M3.cpp ----------
-    void assignReadyToDiag(int t);    // 2.5
-    void finishDiagnosis(int t);      // 2.6, 2.7
-    void printState(int t);           // 2.11 (forwards to ui.printScreen)
+    // ---------- Center_Sim_M5.cpp (2.5), Center_Sim_M6.cpp (2.6, 2.7), Center_Sim_M9.cpp (2.11) ----------
+    void assignReadyToDiag(int t);    // 2.5   (M5)
+    void finishDiagnosis(int t);      // 2.6, 2.7 (M6)
+    void printState(int t);           // 2.11 (M9, forwards to ui.printScreen)
 
-    // ---------- Member 4: Center_Sim_M4.cpp ----------
-    void assignWaitToBays(int t);     // 2.8
-    void finishServices(int t);       // 2.9, 2.10
+    // ---------- Center_Sim_M7.cpp (2.8), Center_Sim_M8.cpp (2.9, 2.10) ----------
+    void assignWaitToBays(int t);     // 2.8   (M7)
+    void finishServices(int t);       // 2.9, 2.10 (M8)
 
-    // ---------- Shared helpers (Member 3 defines them, everyone uses them) ----------
+    // ---------- Read-only counters (tests / statistics) ----------
+    int idleCount() const { return idleList.GetCount(); }
+    int earlyCount() const { return earlyList.GetCount(); }
+    int lateCount() const { return lateList.GetCount(); }
+    int readyCount() const { return readyList.GetCount(); }
+    int diagCount() const { return diagList.GetCount(); }
+    int waitMBCount() const { return waitMB.GetCount(); }
+    int waitEBCount() const { return waitEB.GetCount(); }
+    int waitWBCount() const { return waitWB.GetCount(); }
+    int servCount() const { return servList.GetCount(); }
+    int cnclCount() const { return cnclList.GetCount(); }
+    int fnshCount() const { return fnshList.GetCount(); }
+    int freeDiagBayCount() const { return freeDiagBays.GetCount(); }
+    int freeMBCount() const { return freeMB.GetCount(); }
+    int freeEBCount() const { return freeEB.GetCount(); }
+    int freeWBCount() const { return freeWB.GetCount(); }
+
+    // ---------- Shared helpers: chance/randInt in Center.cpp, the other three in Center_Helpers.cpp ----------
     bool chance(int percent);                  // true with probability percent/100   (Center.cpp)
     int  randInt(int lo, int hi);              // random int in [lo, hi]              (Center.cpp)
-    void assignRandomServices(Car* c);         // fills serviceList + seqType         (Center_Sim_M3.cpp)
+    void assignRandomServices(Car* c);         // fills serviceList + seqType         (Center_Helpers.cpp)
     void moveToWaitList(Car* c);               // puts car in the WAIT list of its next service (2.6/2.7 and 2.9/2.10)
     WaitingQueue& getWaitList(UnitType type);  // MU->waitMB, EU->waitEB, WU->waitWB
 };
